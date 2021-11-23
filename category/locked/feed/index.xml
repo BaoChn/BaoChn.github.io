@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>加密 | 宝昌</title>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../../index.html</link>
+	<description>BaoChn</description>
+	<lastBuildDate>Sun, 21 Nov 2021 09:12:55 +0000</lastBuildDate>
+	<language>zh-CN</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>./../../wp-content/uploads/cropped-noci-32x32.png</url>
+	<title>加密 | 宝昌</title>
+	<link>./../../index.html</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>📷毕业照“蹭拍”记</title>
+		<link>./../../%f0%9f%93%b7.html</link>
+					<comments>./../../%f0%9f%93%b7.html#respond</comments>
+		
+		<dc:creator><![CDATA[宝昌]]></dc:creator>
+		<pubDate>Mon, 15 Nov 2021 15:33:18 +0000</pubDate>
+				<category><![CDATA[加密]]></category>
+		<guid isPermaLink="false">https://a-b.cc/?p=685</guid>
+
+					<description><![CDATA[<p>🔒相片被加密咯！要不猜猜看~</p>
+<p>The post <a href="./../../%f0%9f%93%b7.html">📷毕业照“蹭拍”记</a> first appeared on <a href="./../../index.html">宝昌</a>.</p>]]></description>
+										<content:encoded><![CDATA[<p><img src="https://s.w.org/images/core/emoji/13.1.0/72x72/1f512.png" alt="🔒" class="wp-smiley" style="height: 1em; max-height: 1em;" />内容有做加密哦！</p><p>The post <a href="./../../%f0%9f%93%b7.html">📷毕业照“蹭拍”记</a> first appeared on <a href="./../../index.html">宝昌</a>.</p>]]></content:encoded>
+					
+					<wfw:commentRss>./../../%f0%9f%93%b7.html/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		<enclosure url="./../../wp-content/uploads/飞帽.mp4" length="4449283" type="video/mp4" />
+
+			</item>
+	</channel>
+</rss>
