@@ -1,0 +1,35 @@
+.footext {font-family: "Microsoft YaHei","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif;}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+	line-height: 23.2px;
+}
+
+ul {
+    text-align: center;
+    list-style: none;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+}
+
+div#img {
+	margin-bottom: 9px;
+}
+
+div#time {
+	letter-spacing: 1.6px;
+}
+
+a:link,
+a:visited {
+color:#ffffff;
+text-decoration:underline;
+}
+    
+a:hover,
+a:active {
+color:#ffffff;
+text-decoration:none;
+}

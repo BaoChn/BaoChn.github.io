@@ -1,0 +1,88 @@
+<html>
+<head>
+	<link rel="stylesheet" href="./css/dmaku.css">
+	<!-- CSS stylesheet for jcSlider -->
+	<link rel="stylesheet" href="./css/jcslider.css">
+	<!-- animate CSS stylesheet library -->
+	<link rel="stylesheet" href="./css/animate.min.css">
+	<link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css">
+</head>
+<body>	
+	<main>
+		<section class="footext">
+			<!-- Slider start -->
+			<ul class="jc-slider">
+				<li class="jc-animation">
+					<div class="wrap">
+						<div>
+							<a href="https://github.com/BaoChn/WPtheme" target="_blank"><i class="fal fa-laptop-code"></i></a> with <a href="https://baochn.com/" target="_blank"><i class="fal fa-kiss-wink-heart" style="font-size:20px; color:#FFBCBC" id="myheart"><link type="text/css" rel="stylesheet" href="./wp-includes/css/animate.css"></i></a> use <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><i class="fal fa-closed-captioning"></i></a>
+						</div>
+						<div id="time">
+							<a class="badge badge-light" rel="noopener" href="https://web.umeng.com/main.php?c=site&a=frame&siteid=1280404097" style="color: #FFE11C" aria-label="站点流量统计"><i class="fa fa-cog fa-spin"></i></a>
+							<!--<p>{dede:global.cfg_description/}</p> -->
+							<span id="span"></span>
+							<script type="text/javascript">
+								function runtime(){
+									// 初始时间，日/月/年 时:分:秒
+									X = new Date("09/23/2021 23:32:00");
+									Y = new Date();
+									T = (Y.getTime()-X.getTime());
+									M = 24*60*60*1000;
+									a = T/M;
+									A = Math.floor(a);
+									b = (a-A)*24;
+									B = Math.floor(b);
+									c = (b-B)*60;
+									C = Math.floor((b-B)*60);
+									D = Math.floor((c-C)*60);
+									//信息写入到DIV中
+									span.innerHTML = " "+A+"天"+B+"时"+C+"分"+D+"秒"
+								}
+								setInterval(runtime, 1000);
+							</script>
+						</div>
+					</div>
+				</li>
+				<li class="jc-animation">
+					<div class="wrap">
+						<div id="img">
+							<a href="https://beian.miit.gov.cn/" target="_blank" rel="external nofollow" title="已在工信部备案：皖ICP备-2021016969号" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="./../a-b.cc/wp-content/uploads/ICP-2021016969.svg" alt="皖ICP备-2021016969号"></a>
+						</div>
+						<div>
+							<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=34150202000313" target="_blank" rel="external nofollow" alt="皖公网安备 34150202000313"><img src="./../a-b.cc/wp-content/uploads/Police_ID.svg" margin-top:></a>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<!-- Slider end -->
+		</section>
+	</main>
+	<script src="./js/jquery-1.11.0.min.js"></script>
+	<script src="./js/jquery.jcslider.js"></script>
+	<script>
+	    $(document).ready(function() {
+	        $('.jc-slider').jcSlider({
+	            animationIn: 'bounceInRight',
+	            animationOut: 'bounceOutLeft',
+	            stopOnHover: false
+	        });
+
+	        $('.jc-slider2').jcSlider({
+	            animationIn: 'zoomInUp',
+	            animationOut: 'flipOutX',
+	            stopOnHover: false
+	        });
+	        $('.jc-slider3').jcSlider({
+	            animationIn: 'flipInX',
+	            animationOut: 'shake',
+	            stopOnHover: false
+	        });
+	        $('.jc-slider4').jcSlider({
+	            animationIn: 'zoomIn',
+	            animationOut: 'zoomOut',
+	            stopOnHover: false
+	        });
+	    });
+	</script>
+</body>
+</html>
