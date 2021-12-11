@@ -288,6 +288,20 @@ function __(text){
 	document.addEventListener("scroll", changeToolbarTransparency, {passive: true});
 }();
 
+/*搜索*/
+function searchPosts(word){
+	if ($(".search-result").length > 0){
+		let url = new URL(window.location.href);
+		url.searchParams.set("s", word);
+		$.pjax({
+			url: url.href
+		});
+	}else{
+		$.pjax({
+			url: argonConfig.wp_path + "?s=" + encodeURI(word)
+		});
+	}
+}
 /*顶栏搜索*/
 $(document).on("click" , "#navbar_search_input_container" , function(){
 	$(this).addClass("open");
@@ -306,9 +320,7 @@ $(document).on("keydown" , "#navbar_search_input_container #navbar_search_input"
 		return;
 	}
 	let scrolltop = $(document).scrollTop();
-	$.pjax({
-		url: argonConfig.wp_path + "?s=" + encodeURI(word)
-	});
+	searchPosts(word);
 });
 /*顶栏搜索 (Mobile)*/
 $(document).on("keydown" , "#navbar_search_input_mobile" , function(e){
@@ -321,9 +333,7 @@ $(document).on("keydown" , "#navbar_search_input_mobile" , function(e){
 		return;
 	}
 	let scrolltop = $(document).scrollTop();
-	$.pjax({
-		url: argonConfig.wp_path + "?s=" + encodeURI(word)
-	});
+	searchPosts(word);
 });
 /*侧栏搜索*/
 $(document).on("click" , "#leftbar_search_container" , function(){
@@ -347,14 +357,48 @@ $(document).on("keydown" , "#leftbar_search_input" , function(e){
 		return;
 	}
 	$("html").removeClass("leftbar-opened");
+	searchPosts(word);
+});
+/*搜索过滤器*/
+$(document).on("change" , ".search-filter" , function(e){
+	if (pjaxLoading){
+		$(this).prop("checked", !$(this).prop("checked"));
+		e.preventDefault();
+		return;
+	}
+	pjaxLoading = true;
+	let postTypes = [];
+	$(".search-filter:checked").each(function(){
+		postTypes.push($(this).attr("name"));
+	});
+	if (postTypes.length == 0){
+		postTypes = ["none"];
+	}
+	let url = new URL(document.location.href);
+	url.searchParams.set("post_type", postTypes.join(","));
 	$.pjax({
-		url: argonConfig.wp_path + "?s=" + encodeURI(word)
+		url: url.href
 	});
 });
 
 /*左侧栏随页面滚动浮动*/
 !function(){
 	if ($("#leftbar").length == 0){
+		let contentOffsetTop = $('#content').offset().top;
+		function changeLeftbarStickyStatusWithoutSidebar(){
+			let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+			if( contentOffsetTop - 10 - scrollTop <= 20 ){
+				document.body.classList.add('leftbar-can-headroom');
+			}else{
+				document.body.classList.remove('leftbar-can-headroom');
+			}
+		}
+		changeLeftbarStickyStatusWithoutSidebar();
+		document.addEventListener("scroll", changeLeftbarStickyStatusWithoutSidebar, {passive: true});
+		$(window).resize(function(){
+			contentOffsetTop = $('#content').offset().top;
+			changeLeftbarStickyStatusWithoutSidebar();
+		});
 		return;
 	}
 	let $leftbarPart1 = $('#leftbar_part1');
@@ -1375,7 +1419,7 @@ function foldLongComments(){
 		}
 		if (this.clientHeight > 800){
 			$(this).addClass("comment-folded");
-			$(this).append("<div class='show-full-comment'><i class='fa fa-angle-down'></i> " + __("展开") + "</div>");
+			$(this).append("<div class='show-full-comment'><i class='fa fa-angle-down' aria-hidden='true'></i> " + __("展开") + "</div>");
 		}
 	});
 }
@@ -1705,7 +1749,7 @@ if ($("html").hasClass("banner-as-cover")){
 }
 
 /*Pjax*/
-var pjaxScrollTop = 0;
+var pjaxScrollTop = 0, pjaxLoading = false;
 $.pjax.defaults.timeout = 10000;
 $.pjax.defaults.container = ['#primary', '#leftbar_part1_menu', '#leftbar_part2_inner', '.page-information-card-container', '#wpadminbar'];
 $.pjax.defaults.fragment = ['#primary', '#leftbar_part1_menu', '#leftbar_part2_inner', '.page-information-card-container', '#wpadminbar'];
@@ -1717,6 +1761,7 @@ $(document).pjax("a[href]:not([no-pjax]):not(.no-pjax):not([target='_blank']):no
 	}
 	NProgress.remove();
 	NProgress.start();
+	pjaxLoading = true;
 }).on('pjax:afterGetContainers', function(e, f, g) {
 	if (g.is("#main article.post-preview a.post-title")){
 		let $card = $(g.parents("article.post-preview")[0]);
@@ -1761,6 +1806,7 @@ $(document).pjax("a[href]:not([no-pjax]):not(.no-pjax):not([target='_blank']):no
 		}
 	}
 }).on('pjax:complete', function() {
+	pjaxLoading = false;
 	NProgress.inc();
 	try{
 		if (MathJax != undefined){
@@ -1794,6 +1840,7 @@ $(document).pjax("a[href]:not([no-pjax]):not(.no-pjax):not([target='_blank']):no
 	showPostOutdateToast();
 	calcHumanTimesOnPage();
 	foldLongComments();
+	foldLongShuoshuo();
 
 	if (typeof(window.pjaxLoaded) == "function"){
 		try{
@@ -1970,6 +2017,25 @@ $(document).on("click" , ".shuoshuo-upvote" , function(){
 			});
 		}
 	});
+});
+//折叠长说说
+function foldLongShuoshuo(){
+	if (argonConfig.fold_long_shuoshuo == false){
+		return;
+	}
+	$("#main .shuoshuo-foldable > .shuoshuo-content").each(function(){
+		if ($(this).hasClass("shuoshuo-unfolded")){
+			return;
+		}
+		if (this.clientHeight > 400){
+			$(this).addClass("shuoshuo-folded");
+			$(this).append("<div class='show-full-shuoshuo'><i class='fa fa-angle-down' aria-hidden='true'></i> " + __("展开") + "</div>");
+		}
+	});
+}
+foldLongShuoshuo();
+$(document).on("click" , ".show-full-shuoshuo" , function(){
+	$(this).parent().removeClass("shuoshuo-folded").addClass("shuoshuo-unfolded");
 });
 
 //颜色计算
@@ -2458,7 +2524,10 @@ setInterval(function(){
 
 /*Console*/
 !function(){
-	console.log('%cTheme: %cUnknown%cBy someone', 'color: rgba(255,255,255,.6); background: #082032; font-size: 15px;border-radius:5px 0 0 5px;padding:10px 0 10px 20px;','color: rgba(255,255,255,1); background: #082032; font-size: 15px;border-radius:0;padding:10px 15px 10px 0px;','color: #fff; background: #F0A500; font-size: 15px;border-radius:0 5px 5px 0;padding:10px 20px 10px 15px;');
+   console.log('%cOwner: %cBaoChn%cDesign in CHN', 'color: rgba(255,255,255,.6); background: #082032; font-size: 15px;border-radius:5px 0 0 5px;padding:10px 0 10px 20px;','color: rgba(255,255,255,1); background: #082032; font-size: 15px;border-radius:0;padding:10px 15px 10px 0px;','color: #fff; background: #F0A500; font-size: 15px;border-radius:0 5px 5px 0;padding:10px 20px 10px 15px;');
+2462
    console.log('%cNo.%c' + $("meta[name='theme-version']").attr("content"), 'color:#fff; background: #082032;font-size: 12px;border-radius:5px 0 0 5px;padding:3px 10px 3px 10px;','color:#fff; background: #F0A500;font-size: 12px;border-radius:0 5px 5px 0;padding:3px 10px 3px 10px;');
-	console.log('%chttps://github.com/BaoChn/theme', 'font-size: 12px;border-radius:5px;padding:3px 10px 3px 10px;border:1px solid #5e72e4;');
+2463
+   console.log('%chttps://BaoChn.com', 'font-size: 12px;border-radius:5px;padding:3px 10px 3px 10px;border:1px solid #5e72e4;');
 }();
+
