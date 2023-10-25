@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "SmileySans-About";
+    src: url("/img/SmileySans-About.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.hello-about h1 {
+    font-family: SmileySans-About;
+  }

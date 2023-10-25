@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>宝秘基地</title>
+  <icon>http://a-b.cc/img/512.png</icon>
+  <subtitle>BaoChn</subtitle>
+  <link href="http://a-b.cc/atom.xml" rel="self"/>
+  
+  <link href="http://a-b.cc/"/>
+  <updated>2023-10-25T13:06:08.391Z</updated>
+  <id>http://a-b.cc/</id>
+  
+  <author>
+    <name>宝昌</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>🎙️实现本地化语音转写</title>
+    <link href="http://a-b.cc/Skill/audio2txt/"/>
+    <id>http://a-b.cc/Skill/audio2txt/</id>
+    <published>2023-10-22T04:01:55.000Z</published>
+    <updated>2023-10-25T13:06:08.391Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;tip bell&quot;&gt;&lt;p&gt;剪辑工作上时常有将录制内容输出文字稿的需求，于是研究了下 OpenAI 公司的 &lt;a href=&quot;https://github.com/openai/whisper&quot;&gt;Whisper&lt;/a&gt; 并搭载 &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Skill" scheme="http://a-b.cc/categories/Skill/"/>
+    
+    
+    <category term="STT" scheme="http://a-b.cc/tags/STT/"/>
+    
+    <category term="格式转换" scheme="http://a-b.cc/tags/%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/"/>
+    
+    <category term="大模型" scheme="http://a-b.cc/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    
+    <category term="字幕" scheme="http://a-b.cc/tags/%E5%AD%97%E5%B9%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>🧼镜头画面污点修复（LR篇）</title>
+    <link href="http://a-b.cc/Skill/stain-removal/"/>
+    <id>http://a-b.cc/Skill/stain-removal/</id>
+    <published>2023-09-08T09:58:40.000Z</published>
+    <updated>2023-10-17T13:34:40.879Z</updated>
+    
+    
+    <summary type="html">解决粗心摄像师的一大困扰</summary>
+    
+    
+    
+    <category term="Skill" scheme="http://a-b.cc/categories/Skill/"/>
+    
+    
+    <category term="Lightroom" scheme="http://a-b.cc/tags/Lightroom/"/>
+    
+    <category term="视频处理" scheme="http://a-b.cc/tags/%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>🪟Windows 好软推荐</title>
+    <link href="http://a-b.cc/Skill/win-apps/"/>
+    <id>http://a-b.cc/Skill/win-apps/</id>
+    <published>2023-04-03T22:15:00.000Z</published>
+    <updated>2023-10-10T15:34:49.751Z</updated>
+    
+    
+    <summary type="html">一些小众却好用的宝藏应用集</summary>
+    
+    
+    
+    <category term="Skill" scheme="http://a-b.cc/categories/Skill/"/>
+    
+    
+    <category term="Windows" scheme="http://a-b.cc/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>💡拒升 WIN11 却馋 WSA？安排！</title>
+    <link href="http://a-b.cc/Skill/wsa-free/"/>
+    <id>http://a-b.cc/Skill/wsa-free/</id>
+    <published>2023-03-01T03:18:00.000Z</published>
+    <updated>2023-10-10T15:34:12.834Z</updated>
+    
+    
+    <summary type="html">玩转 Win10 安卓应用新姿势</summary>
+    
+    
+    
+    <category term="Skill" scheme="http://a-b.cc/categories/Skill/"/>
+    
+    
+    <category term="Windows 10" scheme="http://a-b.cc/tags/Windows-10/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>🤖New Bing 使用引导</title>
+    <link href="http://a-b.cc/Skill/new-bing/"/>
+    <id>http://a-b.cc/Skill/new-bing/</id>
+    <published>2023-02-15T06:13:02.000Z</published>
+    <updated>2023-10-18T15:11:36.681Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;tip cogs&quot;&gt;&lt;p&gt;继微软前段时间对 OpenAI 进行&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Skill" scheme="http://a-b.cc/categories/Skill/"/>
+    
+    
+    <category term="AIGC" scheme="http://a-b.cc/tags/AIGC/"/>
+    
+    <category term="ChatGPT" scheme="http://a-b.cc/tags/ChatGPT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>🎬外接动画短片</title>
+    <link href="http://a-b.cc/Art/animation-works/"/>
+    <id>http://a-b.cc/Art/animation-works/</id>
+    <published>2023-01-18T10:18:46.000Z</published>
+    <updated>2023-10-18T16:34:24.746Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;note info simple&quot;&gt;&lt;p&gt;内容为节选片段，不代表最终效果&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;video controls poster=&quot;https://A-B.CC/wp-content/uploads/phishing.webp&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Art" scheme="http://a-b.cc/categories/Art/"/>
+    
+    
+    <category term="动画" scheme="http://a-b.cc/tags/%E5%8A%A8%E7%94%BB/"/>
+    
+    <category term="原创" scheme="http://a-b.cc/tags/%E5%8E%9F%E5%88%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>💾FFmpeg 转码笔记</title>
+    <link href="http://a-b.cc/Skill/ffmpeg-notes/"/>
+    <id>http://a-b.cc/Skill/ffmpeg-notes/</id>
+    <published>2022-08-08T09:22:37.000Z</published>
+    <updated>2023-10-11T14:49:10.856Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、配置系统环境变量&quot;&gt;&lt;a href=&quot;#一、配置系统环境变量&quot; class=&quot;headerlink&quot; title=&quot;一、配置系统环境变量&quot;&gt;&lt;/a&gt;一、配置系统环境变量&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;命令行工具获取&lt;/li&gt;
+&lt;li&gt;访问 &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Skill" scheme="http://a-b.cc/categories/Skill/"/>
+    
+    
+    <category term="FFmpeg" scheme="http://a-b.cc/tags/FFmpeg/"/>
+    
+    <category term="转码" scheme="http://a-b.cc/tags/%E8%BD%AC%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>🚍应届实习小记</title>
+    <link href="http://a-b.cc/Diary/1st-job/"/>
+    <id>http://a-b.cc/Diary/1st-job/</id>
+    <published>2022-03-14T00:30:23.000Z</published>
+    <updated>2023-10-25T11:41:18.851Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;tip bell&quot;&gt;&lt;p&gt;浅谈个人2022年度应届毕业实习体验&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;timeline blue&quot;&gt;&lt;div class=&#39;timeline-item headline&#39;&gt;&lt;div</summary>
+        
+      
+    
+    
+    
+    <category term="Diary" scheme="http://a-b.cc/categories/Diary/"/>
+    
+    
+    <category term="工作" scheme="http://a-b.cc/tags/%E5%B7%A5%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>👋Have a Guess? 猜不着!</title>
+    <link href="http://a-b.cc/Posts/halo/"/>
+    <id>http://a-b.cc/Posts/halo/</id>
+    <published>2021-09-24T15:59:59.000Z</published>
+    <updated>2023-10-25T11:54:38.202Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;A adulthood man which nearly graduate🎓, I’m willing to provide any assist if it’s needed for you guys~&lt;/p&gt;
+&lt;iframe</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Intro" scheme="http://a-b.cc/tags/Intro/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>🚴‍♂️暑期骑行初体验</title>
+    <link href="http://a-b.cc/Diary/summer-bicycling/"/>
+    <id>http://a-b.cc/Diary/summer-bicycling/</id>
+    <published>2021-08-20T00:11:16.000Z</published>
+    <updated>2023-10-13T14:21:13.485Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;短暂的暑假实习收场后，寻思着要不先整个驾照耍耍🤔出于驾校也没多远路程，便翻出积灰多年的🚲先骑车适应一阵子，后面直接骑到驾校去-这才第一天，就被深深震撼到了…&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Diary" scheme="http://a-b.cc/categories/Diary/"/>
+    
+    
+    <category term="骑行" scheme="http://a-b.cc/tags/%E9%AA%91%E8%A1%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>🎙️记录初个配音作品</title>
+    <link href="http://a-b.cc/Art/dub-work/"/>
+    <id>http://a-b.cc/Art/dub-work/</id>
+    <published>2020-12-08T08:59:33.000Z</published>
+    <updated>2023-10-13T15:48:29.488Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div id=&quot;player_20221b0a2d8ffcd8&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; data-pjax</summary>
+        
+      
+    
+    
+    
+    <category term="Art" scheme="http://a-b.cc/categories/Art/"/>
+    
+    
+    <category term="配音" scheme="http://a-b.cc/tags/%E9%85%8D%E9%9F%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>🎨若干随手画</title>
+    <link href="http://a-b.cc/Art/daily-painting/"/>
+    <id>http://a-b.cc/Art/daily-painting/</id>
+    <published>2019-09-18T00:19:28.000Z</published>
+    <updated>2023-10-13T14:55:39.114Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;gallery-group-main&quot;&gt;
+ 
+  &lt;figure class=&quot;gallery-group&quot;&gt;
+  &lt;img class=&quot;gallery-group-img no-lightbox&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Art" scheme="http://a-b.cc/categories/Art/"/>
+    
+    
+    <category term="手绘" scheme="http://a-b.cc/tags/%E6%89%8B%E7%BB%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://a-b.cc/Posts/hello-world/"/>
+    <id>http://a-b.cc/Posts/hello-world/</id>
+    <published>1970-01-01T00:00:02.012Z</published>
+    <updated>2023-10-10T15:39:09.263Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>

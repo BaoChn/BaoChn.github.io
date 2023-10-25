@@ -1,0 +1,1 @@
+var posts=["/Diary/1st-job/","/Art/animation-works/","/Skill/audio2txt/","/Art/daily-painting/","/Art/dub-work/","/Skill/ffmpeg-notes/","/Posts/halo/","/Posts/hello-world/","/Skill/stain-removal/","/Skill/new-bing/","/Diary/summer-bicycling/","/Skill/win-apps/","/Skill/wsa-free/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
